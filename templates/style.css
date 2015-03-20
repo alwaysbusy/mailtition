@@ -1,0 +1,63 @@
+/* Specifics for particular campaign */
+/* Could include fonts, colours and background images */
+/* Sample/good config given */
+header{
+    max-width: 1008px;
+}
+
+article{
+    max-width: 1008px;
+    margin: 0px auto 0px auto;
+}
+
+nav{
+    background-color: rgba(255,255,255,0.8);
+}
+
+nav ul{
+    max-width: 1008px;
+    margin: 0px auto 0px auto;
+}
+
+/* Styling for general display */
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+nav{
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+nav ul{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+    padding-left: 0px;
+    cursor: pointer;
+}
+nav ul li:last-of-type{
+    float:right;
+}
+
+table{
+    width: 100%;
+}
+
+textarea{
+    width: 100%;
+    font: inherit;
+}
+
+tr td:first-of-type, tr th:first-of-type{
+    max-width: 10px;
+    text-align: right;
+}

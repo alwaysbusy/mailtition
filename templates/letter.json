@@ -1,0 +1,57 @@
+{
+    "to" : [
+        {
+            "title" : "",
+            "firtname" : "",
+            "lastname" : "",
+            "postnom" : "",
+            "description" : "",
+            "email" : ""
+        }
+    ],
+    "cc" : [],
+    "bcc" : [],
+    "sections" : [
+        {
+            "type" : "introduction",
+            "required" : true,
+            "editable" : false,
+            "value" : "Dear ||title|| ||lastname||"
+        },
+        {
+            "type" : "title",
+            "required" : true,
+            "editable" : false,
+            "value" : ""
+        },
+        {
+            "type" : "paragraph",
+            "required" : true,
+            "editable" : false,
+            "value" : ""
+        },
+        {
+            "type" : "paragraph",
+            "required" : false,
+            "editable" : true,
+            "value" : ""
+        },
+        {
+            "type" : "paragraph",
+            "required" : true,
+            "editable" : false,
+            "value" : "Yours sincerely"
+        },
+        {
+            "type" : "close",
+            "required" : true,
+            "editable" : false,
+            "value" : "||firstname|| ||lastname||"
+        },
+        {
+            "type" : "disclaimer",
+            "required" : "true",
+            "value" : ""
+        }
+    ]
+}
