@@ -1,5 +1,14 @@
 <?php
 //Database configuration
+$dbhost = ''; //Database Host
+
+$dbport = ''; //Databse Host port number
+
+$dbuser = ''; //Database Username (Must have full rights over database $dbname)
+
+$dbpass = ''; //Databse user password
+
+$dbname = ''; //Database Name
 
 
 //Organisation configuration
