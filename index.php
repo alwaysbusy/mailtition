@@ -2,7 +2,11 @@
 
 require_once('templates/config.php');
 
-echo '<!DOCTYPE html><html><head><title>' . $lettertitle . ' - ' . $orgname . '</title><link rel="stylesheet" type="text/css" href="templates/style.css"><script type="application/javascript" src="templates/script.js"></script>' . $metatags . '</head><body><header>';
+echo '<!DOCTYPE html><html><head><title>' . $lettertitle . ' - ' . $orgname . '</title><link rel="stylesheet" type="text/css" href="templates/style.css"><script type="application/javascript" src="templates/script.js"></script>' . $metatags;
+if (file_exists('templates/custom.css')) {
+    echo '<link rel="stylesheet" type="text/css" href="templates/custom.css">';
+}
+echo '</head><body><header>';
 include('templates/header.php');
 echo '</header>';
 

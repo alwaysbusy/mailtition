@@ -1,2 +1,5 @@
 templates/config.php
 templates/letter.json
+templates/header.php
+templates/footer.php
+templates/custom.css
