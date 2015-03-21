@@ -16,8 +16,12 @@
             <tbody>
                 <?php
                 require_once('templates/config.php');
+
+                if ($dbport === ''){
+                    $dbport = '3306';
+                }
                 
-                $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+                $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname, $dbport);
                 if (!$conn) {
                     echo '<tr><td>Test</td><td>Database Connection</td><td>Failed</td></tr>';
                     end;
