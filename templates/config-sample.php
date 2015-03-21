@@ -2,7 +2,7 @@
 //Database configuration
 $dbhost = ''; //Database Host
 
-$dbport = ''; //Databse Host port number (Default if blank)
+$dbport = null; //Databse Host port number (Default if null)
 
 $dbuser = ''; //Database Username (Must have full rights over database $dbname)
 

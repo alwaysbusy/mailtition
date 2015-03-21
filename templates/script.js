@@ -56,9 +56,12 @@ function moveStage(change){
             window.document.getElementById('nav-next').innerHTML = 'Send';
             break;
         case 4:
-            //TODO: Send/store in db
+            if (!ajaxSubmit()) {
+                stage = 3;
+                break;
+            }
             window.document.getElementById('confirm').style.display = 'none';
-            window.document.getElementById('send').style.display = 'block';
+            window.document.getElementById('sent').style.display = 'block';
             window.document.getElementsByTagName('nav')[0].style.display = 'none';
     }
 }
@@ -139,16 +142,45 @@ function validateLetter() {
     while (window.document.getElementsByName(i + '-inc').length > 0) {
         if (window.document.getElementsByName(i + '-inc')[0].checked) {
             if (window.document.getElementsByName(i + '-val').length > 0) {
-                if (window.document.getElementsByName(i + '-val')[0].innerHTML == '') {
+                if (window.document.getElementsByName(i + '-val')[0].value == '') {
                     valid = false;
+                    alert('Please fill in all customisable parts of the letter you have chosen.');
                 }
             }
-        } else if (window.document.getElementsByName(i + '-inc')[0].disabled){
+        } else if (window.document.getElementsByName(i + '-inc')[0].disabled) {
             valid = false;
+            alert('You have removed a required part of the letter');
         }
         i++;
     }
     return valid;
+}
+
+function ajaxSubmit( ){
+    //Generate POST string
+    var postString = 'firstname=' + encodeURIComponent(window.document.forms.letter.firstname.value) + '&lastname=' + encodeURIComponent(window.document.forms.letter.lastname.value) + '&email=' + encodeURIComponent(window.document.forms.letter.email.value);
+    
+    var i = 0;
+    while (window.document.getElementsByName(i + '-inc').length > 0) {
+        postString += '&' + i + '-inc=' + window.document.getElementsByName(i + '-inc')[0].checked;
+        if (window.document.getElementsByName(i + '-val').length > 0) {
+            postString += '&' + i + '-val=' + encodeURIComponent(window.document.getElementsByName(i + '-val')[0].value);
+        }
+        i++;
+    }
+    //Send via ajax
+    var ajax = ajaxRequest();
+    ajax.open('POST','store.php',false);
+    ajax.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+    ajax.send(postString);
+    
+    //Process response
+    if(ajax.responseText == 'QUEUE'){
+        return true;
+    } else {
+        alert('Please check your letter and try again');
+        return false;
+    }
 }
 
 //Ajax element

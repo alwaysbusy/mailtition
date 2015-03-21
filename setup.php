@@ -17,8 +17,8 @@
                 <?php
                 require_once('templates/config.php');
 
-                if ($dbport === ''){
-                    $dbport = '3306';
+                if ($dbport == null){
+                    $dbport = 3306;
                 }
                 
                 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname, $dbport);
