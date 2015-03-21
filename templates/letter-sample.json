@@ -1,4 +1,6 @@
 {
+    "__comment1" : "You can remove all fields that begin with __ to clean up what is delivered to the end user",
+    "__comment2" : "to, cc and bcc refer to those respective fields when sending the email.  The from and reply-to addresses will always be specified as the sender.",
     "to" : [
         {
             "title" : "",
@@ -11,8 +13,10 @@
     ],
     "cc" : [],
     "bcc" : [],
+    "__comment3" : "All sections are given in order and must have a type, required, editable and value",
     "sections" : [
         {
+            "__comment1" : "introduction, title, paragraph, close and disclaimer are all valid types.  introduction and close use the receiver and sender information to replace text in || marks.  title is in bold and disclaimer is in smaller text",
             "type" : "introduction",
             "required" : true,
             "editable" : false,
@@ -50,7 +54,8 @@
         },
         {
             "type" : "disclaimer",
-            "required" : "true",
+            "required" : true,
+            "editable" : false,
             "value" : ""
         }
     ]

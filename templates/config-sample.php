@@ -26,6 +26,6 @@ $confirm = 'Yes'; //Message to show on final screen before the user commits to s
 
 $sent = 'No!'; //Message to show after their message has been queued to be sent.
 
-//Letter template is stored in letter.json and is documented there
+//Letter template is stored in letter-sample.json and is documented there
 
 ?>
