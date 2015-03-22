@@ -47,6 +47,10 @@
                     $sql = "UPDATE mailtition SET status=5 WHERE id=" . $row['id'];
                     $conn->query($sql);
                 }
+            } else {
+                //Item approved - Set status to 2
+                $sql = "UPDATE mailtition SET status=2 WHERE id=" . $row['id'];
+                $conn->query($sql);
             }
         }
         

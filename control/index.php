@@ -135,16 +135,23 @@
             }
             
             function removeModerated() {
-                var ids = "";
-                for (var i = 0; i < window.document.getElementsByTagName("input").length; i++) {
-                    if (window.document.getElementsByTagName("input")[i].checked) {
-                        ids += window.document.getElementsByTagName("input")[i].id.split("-")[0] + ",";
+                var ids = '';
+                var approved = ''
+                for (var i = 0; i < window.document.getElementsByTagName('input').length; i++) {
+                    if (window.document.getElementsByTagName('input')[i].checked) {
+                        ids += window.document.getElementsByTagName('input')[i].id.split('-')[0] + ',';
+                    } else {
+                        approved += window.document.getElementsByTagName('input')[i].id.split('-')[0] + ',';
                     }
                 }
                 if (ids.length > 0) {
                     ids = ids.substring(0, ids.length - 1);
                 }
-                loadContent("manmod","ids=" + ids);
+                if (approved.length > 0) {
+                    approved = approved.substring(0, approved.length - 1);
+                }
+                
+                loadContent('manmod','ids=' + ids + '&approved=' + approved);
             }
         </script>
         <?php } ?>
