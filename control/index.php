@@ -124,6 +124,14 @@
                 }
             }
             
+            function sendLetters() {
+                var parameters = 'status-1=' + window.document.getElementsByName('status-1')[0].checked + "&status-2=" + window.document.getElementsByName('status-2')[0].checked + '&num=' + window.document.getElementsByName('num')[0].value + "&frequency=" + window.document.getElementsByName('frequency')[0].value;
+                var content = contentReq('sender', parameters);
+                var newwin = window.open('about:blank','_blank','height=800, width=500, menubar=0, status=0, toolbar0');
+                newwin.document.write(content);
+                
+            }
+            
             function setBreadcrumb(num, content) {
                 window.document.getElementById('breadcrumb' + num).innerHTML = content;
             }

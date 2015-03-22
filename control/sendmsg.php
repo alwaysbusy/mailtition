@@ -78,7 +78,7 @@
                 }
                 $headers .= "Bcc: " . implode(', ', $bcc) . "\r\n";
             }
-            $headers .= "Sender: " . $row['firstname'] . ' ' . $row['lastname'] . " <" . $orgemail . ">\r\n";
+            $headers .= "Sender: " . $row['firstname'] . ' ' . $row['lastname'] . " <" . $row['email'] . ">\r\n";
             $headers .= "X-Mailer: " . split('@', $orgemail)[1] . "\r\n";
             $headers .= "Reply-To: " . $row['email'] . "\r\n";
             $headers .= "MIME-Version: 1.0\r\n";
@@ -86,7 +86,7 @@
             $toaddress = $to->firstname . ' ' . $to->lastname . ' <' . $to->email . '>';
             mail($toaddress, $lettertemplate->subject, $letterhtml, $headers);
             
-            echo 'Message sent to ' . $toaddress . '\r\n';
+            echo 'Message sent from ' . $row['firstname'] . ' ' . $row['lastname'] . ' to ' . $toaddress . "\r\n";
             
             $firstto = false;
         }
