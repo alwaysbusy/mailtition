@@ -14,6 +14,8 @@ $dbname = ''; //Database Name
 //Organisation configuration
 $orgname = ''; //Organisation Name
 
+$orgemail = ''; //Email address used in emails sent out
+
 
 //Configuration for the letter to be sent
 $lettertitle = ''; //Title to refer to letter when being seen by user

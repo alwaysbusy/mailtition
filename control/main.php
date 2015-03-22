@@ -14,7 +14,7 @@
 <ul>
     <li><a title="View Submissions" onclick="loadContent('submissions',null);">View Submissions</a></li>
     <li><a title="Auto-moderate" onclick="loadContent('moderate',null);">Auto-moderate</a></li>
-    <li><a href="" title="Begin send-out">Begin send-out</a></li>
+    <li><a title="Begin send-out" onclick="loadContent('sendout',null);">Begin send-out</a></li>
 </ul>
 
 <?php

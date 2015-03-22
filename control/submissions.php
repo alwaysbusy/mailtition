@@ -55,7 +55,7 @@
                     default:
                         echo 'Corrupt';
                 }
-                echo '</td><td><a title="View Letter" onclick="loadWindowedContent(\'preview\',\'id=' . $row['id'] . '\');">View Letter</a><a title="Delete" onclick="deleteLetter(' . $row['id'] . ');">Delete</a><a title="Send">Send</a></td></tr>';
+                echo '</td><td><a title="View Letter" onclick="loadWindowedContent(\'preview\',\'id=' . $row['id'] . '\');">View Letter</a><a title="Delete" onclick="deleteLetter(' . $row['id'] . ');">Delete</a><a title="Send" onclick="sendLetter(' . $row['id'] . ');">Send</a></td></tr>';
             }
             
         ?>

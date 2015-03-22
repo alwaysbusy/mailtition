@@ -13,6 +13,7 @@
     ],
     "cc" : [],
     "bcc" : [],
+    "subject" : "",
     "__comment3" : "All sections are given in order and must have a type, required, editable and value",
     "sections" : [
         {

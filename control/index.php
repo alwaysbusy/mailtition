@@ -153,6 +153,12 @@
                 
                 loadContent('manmod','ids=' + ids + '&approved=' + approved);
             }
+            
+            function sendLetter(id) {
+                if (confirm("Letter " + id + " will now be sent to all recipients.")) {
+                    loadWindowedContent('sendmsg', 'id=' + id);
+                }
+            }
         </script>
         <?php } ?>
     </head>
