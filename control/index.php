@@ -27,6 +27,7 @@
             
             a{
                 cursor: pointer;
+                text-decoration: underline;
             }
             
             header{
@@ -56,6 +57,13 @@
             
             th, td{
                 border: 1px solid #000000;
+            }
+            
+            td a{
+                margin-right: 10px;
+            }
+            td a:last-of-type{
+                margin-right: 0px;
             }
             
             .title{
@@ -109,7 +117,7 @@
                 var content = contentReq(windowtype, parameters);
                 if(content != 'FAIL'){
                     var windowHtml = '<!DOCTYPE html><html><head><title>Mailtition</title><style type="text/css">body{font-family: Arial, Helvetica, sans-serif;}.title{font-weight: bold;}.disclaimer{font-size: 0.6em;}</style></head><body>' + content + '</body></html>';
-                    var newwin = window.open('about:blank','_blank','height=400, width=400, menubar=0, status=0, toolbar0');
+                    var newwin = window.open('about:blank','_blank','height=800, width=500, menubar=0, status=0, toolbar0');
                     newwin.document.write(windowHtml);
                 } else {
                     alert('Your request could not be completed');
