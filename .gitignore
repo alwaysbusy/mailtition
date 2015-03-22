@@ -3,3 +3,6 @@ templates/letter.json
 templates/header.php
 templates/footer.php
 templates/custom.css
+templates/*.jpg
+templates/*.png
+templates/*.gif

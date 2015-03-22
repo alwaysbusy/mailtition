@@ -1,7 +1,8 @@
 /* Specifics for particular campaign */
 /* Can be overriden */
-header{
+header, footer{
     max-width: 1008px;
+    margin: 8px auto 8px auto;
 }
 
 article{
@@ -41,7 +42,6 @@ nav ul{
 nav ul li{
     display: inline-block;
     list-style-type: none;
-    padding-left: 0px;
     cursor: pointer;
 }
 nav ul li:last-of-type{
@@ -60,4 +60,11 @@ textarea{
 tr td:first-of-type, tr th:first-of-type{
     max-width: 10px;
     text-align: right;
+}
+
+tr.title{
+    font-weight: bold;
+}
+tr.disclaimer{
+    font-size: 0.6em;
 }

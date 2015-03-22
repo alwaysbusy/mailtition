@@ -119,7 +119,7 @@ function loadLetter() {
         newInclude.appendChild(newIncludeBox);
         newElem.appendChild(newInclude);
         //Set Actual contents
-        var newContent = window.document.createElement('tr');
+        var newContent = window.document.createElement('td');
         newContent.setAttribute('class', lettercontent.sections[i].type);
         if (!lettercontent.sections[i].editable) {
             var newContentText = window.document.createElement('p');
